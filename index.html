@@ -118,8 +118,59 @@
             background-color: #cce0ff;
         }
 
+        /* Gradient background */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        /* Fade-in animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Card container */
+        .card {
+            background: #ffffffdd;
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        /* Title */
+        .card p {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Dropdown styling */
         #languageSelect {
-            width: 300px;
+            width: 100%;
             padding: 14px 18px;
             border-radius: 12px;
             background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
@@ -130,7 +181,6 @@
             border: 1px solid #ddd;
             transition: all 0.3s ease;
             appearance: none;
-            position: relative;
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M70 90 L40 60 H100 Z' fill='%23333'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: right 16px center;
@@ -139,13 +189,12 @@
 
         #languageSelect:hover {
             box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-            transform: scale(1.02);
+            transform: scale(1.01);
         }
 
         #languageSelect:focus {
             outline: none;
             border-color: #facc15;
-            /* yellow-300 */
             box-shadow: 0 0 0 4px rgba(250, 204, 21, 0.3);
             background-color: #fff;
         }
@@ -169,19 +218,19 @@
 
 
 
-
-
-    <select id="languageSelect"
-        class="w-full p-3 rounded-xl bg-white/80 text-gray-800 font-medium shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-300">
-        <option value="">-- Select Language --</option>
-        <option value="russian">Russian</option>
-        <option value="turkish">Turkish</option>
-        <option value="french">French</option>
-        <option value="german">German</option>
-        <option value="portuguese">Portuguese</option>
-        <option value="spanish">Spanish</option>
-        <option value="italian">Italian</option>
-    </select>
+    <div class="card">
+        <p>🌐 Choose Your Language:</p>
+        <select id="languageSelect">
+            <option value="">-- Select Language --</option>
+            <option value="russian">Russian</option>
+            <option value="turkish">Turkish</option>
+            <option value="french">French</option>
+            <option value="german">German</option>
+            <option value="portuguese">Portuguese</option>
+            <option value="spanish">Spanish</option>
+            <option value="italian">Italian</option>
+        </select>
+    </div>
 
     <div class="overlay" id="overlay" onclick="closePopup()"></div>
 
