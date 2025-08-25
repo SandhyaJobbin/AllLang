@@ -115,10 +115,10 @@
 
 <body class="island-bg body-font">
     <!-- Loader -->
-    <div id="loader"
-        class="fixed inset-0 flex items-center justify-center z-50" style="background-color: transparent;">
+    <div id="loader" class="fixed inset-0 flex items-center justify-center z-50" style="background-color: transparent;">
         <div class="flex flex-col items-center">
-            <img   style="height: 300px;width: 300px;" src="https://images.squarespace-cdn.com/content/v1/5c4a3053b98a78bea1e90622/1575486969836-DQKSYYW7F60712AGPFKV/loader.gif"
+            <img style="height: 300px;width: 300px;"
+                src="https://images.squarespace-cdn.com/content/v1/5c4a3053b98a78bea1e90622/1575486969836-DQKSYYW7F60712AGPFKV/loader.gif"
                 alt="Loading..." class="w-32 h-32 animate-bounce">
             <p class="mt-4 text-white text-lg font-semibold animate-pulse">Loading your adventure...</p>
         </div>
@@ -152,17 +152,30 @@
                 <div class="max-w-md mx-auto mb-8">
                     <label for="languageSelect" class="block text-white text-lg font-semibold mb-2">🌐 Choose Your
                         Language:</label>
-                    <select id="languageSelect"
+                    <!-- <select id="languageSelect"
                         class="w-full p-3 rounded-xl bg-white/80 text-gray-800 font-medium shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-300">
                         <option value="">-- Select Language --</option>
                         <option value="english">French</option>
-                        <option value="hindi">Hindi</option>
+                        <option value="hindi">Turkish</option>
                         <option value="spanish">Spanish</option>
-                        <option value="french">French</option>
                         <option value="german">German</option>
                         <option value="japanese">Japanese</option>
                         <option value="chinese">Chinese</option>
+                    </select> -->
+
+
+                    <select id="languageSelect"
+                        class="w-full p-3 rounded-xl bg-white/80 text-gray-800 font-medium shadow-md focus:outline-none focus:ring-2 focus:ring-yellow-300">
+                        <option value="">-- Select Language --</option>
+                        <option value="russian">Russian</option>
+                        <option value="turkish">Turkish</option>
+                        <option value="french">French</option>
+                        <option value="german">German</option>
+                        <option value="portuguese">Portuguese</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="italian">Italian</option>
                     </select>
+
                 </div>
 
             </div>
@@ -1147,13 +1160,13 @@
 
     <script>
         const languageURLs = {
-            english: "French.html",
-            hindi: "https://sandhyajobbin.github.io/Advisor---Review-Detective/",
-            spanish: "https://yourdomain.com/es",
-            french: "https://yourdomain.com/fr",
-            german: "https://yourdomain.com/de",
-            japanese: "https://yourdomain.com/ja",
-            chinese: "https://yourdomain.com/zh"
+            russian: "Idiom Island Russian.html",
+            turkish: "Idiom Island Turkish.html",
+            spanish: "Idiom New Spanish.html",
+            french: "Idiom New French.html",
+            german: "Idiom New German.html",
+            portuguese: "Idiom New Portuguese.html",
+            italian: "Idiom_Island_Italian.html"
         };
 
         document.getElementById("languageSelect").addEventListener("change", function () {
@@ -1163,13 +1176,13 @@
             }
         });
     </script>
-    
+
     <script>
         window.addEventListener("load", () => {
             setTimeout(() => {
                 document.getElementById("loader").style.display = "none";
                 document.getElementById("app").classList.remove("hidden");
-            }, 2500); // Delay in milliseconds
+            }, 1500); // Delay in milliseconds
         });
     </script>
 
